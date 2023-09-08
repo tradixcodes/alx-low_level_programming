@@ -1,7 +1,10 @@
 #include <stdio.h>
+/**
+ *main - Entry point
+ *Return: always 0 (success)
+ */
 int main(void)
 {
-	char mystring[] = "Programming is like building a multilingual puzzle";
-	puts(mystring);
+	puts("\"Programming is like a multilingual puzzle");
 	return (0);
 }
