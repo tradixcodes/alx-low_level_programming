@@ -1,7 +1,7 @@
 #include <ctype.h>
 #include "main.h"
 /**
- * _islower(int c) - checks for a lowercase character
+ * _islower - checks for a lowercase character
  *
  * @c: parameter to pass ASCII values
  *
