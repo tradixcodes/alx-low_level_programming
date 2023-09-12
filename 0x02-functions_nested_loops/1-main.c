@@ -1,13 +1,15 @@
-#include "main.h" 
-void print_alphabet(void)
+#include "main.h"
+/**
+ * main - Entry point
+ *
+ * Description - prints alphabet
+ * uses function and invocations
+ * Return: Always 0 (success)
+ */
+int main(void)
 {
-	char ch = 'a';
-
-	while (ch <= 'z')
-	{
-		_putchar(ch);
-		ch++;
-	}
-	return;
+	print_alphabet();
+	_putchar('\n');
+	return (0);
 }
 

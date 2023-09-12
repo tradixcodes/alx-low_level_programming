@@ -1,19 +1,13 @@
 #include "main.h"
-void print_alphabet_x10(void)
+/**
+ * main - Entry point
+ *
+ * Description -prints the alphabet 10 times
+ *
+ * Return: Always 0 (success)
+ */
+int main(void)
 {
-	char ch;
-	int i;
-
-	for (i = 0; i < 10 ; i++)
-	{
-		ch = 'a';
-		while (ch <= 'z')
-		{
-			_putchar(ch);
-			ch++;
-		}
-		_putchar('\n');
-	}
-	return;
+	print_alphabet_x10();
+	return (0);
 }
-
