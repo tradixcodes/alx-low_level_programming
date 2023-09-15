@@ -1,4 +1,4 @@
-# INTRO
+# 0x00 - Hello World
 ---
 > New directory for c projects.
 
