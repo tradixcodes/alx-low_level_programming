@@ -1,4 +1,4 @@
-# 0x02 - functions_nested_loops
+# 0x01 - variables_if_else_while
 ---
 >Description
 Will be updated later 😉
