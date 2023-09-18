@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_array - prints characters in the array
  *
@@ -16,13 +17,11 @@ void print_array(int *a, int n)
 		if (i < (n - 1))
 		{
 			printf("%d", a[i]);
-			_putchar(',');
-			_putchar(' ');
+			printf(", ");
 		}
 		else
 		{
-			printf("%d", a[i]);
-			_putchar('\n');
+			printf("%d\n", a[i]);
 		}
 	}
 }
