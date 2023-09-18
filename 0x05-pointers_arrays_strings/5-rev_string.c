@@ -3,23 +3,24 @@
 /**
  * rev_string - prints in reverse
  *
- * @s: parameter for a string
+ * @str: parameter for a string
  *
  * Return: void
  */
-void rev_string(char *s)
+void rev_string(char *str)
 {
-	int i, j;
+	int len = strlen(str);
+	int start = 0;
+	int end = strlen(str) - 1;
 
-	for (j = 0; s[j] != '\0'; j++)
+	while (start < end)
 	{
-		_putchar(s[j]);
-	}
-	_putchar('\n');
+		char temp;
 
-	for (i = strlen(s) - 1; i >= 0; i--)
-	{
-		_putchar(s[i]);
+		temp = str[start];
+		str[start] = str[end];
+		str[end] = temp;
+		start++;
+		end--;
 	}
-	_putchar('\n');
 }
