@@ -9,11 +9,14 @@
  */
 void puts_half(char *str)
 {
-	if (strlen(str) % 2 != 0)
-	{
-		int length = ((strlen(str) - 1) / 2);
+	int len = strlen(str);
+	/*complete length of the string*/
 
-		for (; length < strlen(str); length++)
+	if (len % 2 != 0)
+	{
+		int length = ((len - 1) / 2);
+
+		for (; length < len; length++)
 		{
 			_putchar(str[length]);
 		}
@@ -21,9 +24,9 @@ void puts_half(char *str)
 	}
 	else
 	{
-		int length = (strlen(str) / 2);
+		int length = (len / 2);
 
-		for (; length < strlen(str); length++)
+		for (; length < len; length++)
 		{
 			_putchar(str[length]);
 		}
