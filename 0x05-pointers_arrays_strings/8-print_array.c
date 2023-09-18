@@ -13,21 +13,16 @@ void print_array(int *a, int n)
 
 	for (i = 0; i < n; i++)
 	{
-		if (i == 0)
+		if (i < (n - 1))
 		{
-			_putchar(a[i] + 48);
+			printf("%d", a[i]);
 			_putchar(',');
-		}
-		else if (i == (n - 1))
-		{
-			_putchar(a[i] + 48);
-			_putchar('\n');
+			_putchar(' ');
 		}
 		else
 		{
-			_putchar(' ');
-			_putchar(a[i] + 48);
-			_putchar(',');
+			printf("%d", a[i]);
+			_putchar('\n');
 		}
 	}
 }
