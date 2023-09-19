@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * _atoi - ASCII to Integer
  * strtol is better than atoi in a way
