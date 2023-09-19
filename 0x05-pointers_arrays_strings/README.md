@@ -49,7 +49,7 @@ In summary:
     putchar is for printing single characters and does not add a newline by default.
     printf is a versatile function for formatted output, suitable for printing various types of data and formatting them as needed.<br>
 
-    ## atoi and strtol<br>
+## atoi and strtol<br>
 The `atoi` function in C does not directly handle the presence of a plus (`+`) or minus (`-`) sign in front of the numeric string. It treats the plus sign as part of the string and converts the numeric portion to an integer. For example:
 
 ```c
