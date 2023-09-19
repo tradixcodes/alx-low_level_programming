@@ -2,7 +2,7 @@
 ## Intro <br>
 - Will include documentation and links soon<br>
 ## Difference between puts, putchar and printf <br>
-n C, puts and putchar are both used for output, but they serve different purposes, and printf is a more versatile and general-purpose output function. Here's an explanation of each:
+C, puts and putchar are both used for output, but they serve different purposes, and printf is a more versatile and general-purpose output function. Here's an explanation of each:
 <br>
     puts:<br>
         puts stands for "put string." <br>
