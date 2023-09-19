@@ -1,36 +1,40 @@
 #include "main.h"
-#include <stdlib.h>
-#include <ctype.h>
+
 /**
- * _atoi - ASCII to Integer
- * strtol is better than atoi in a way
- * @s: parameter for a string
- * Return: the ASCII value of the string
+ * _atoi - Convert a string to an integer.
+ * @s: The pointer to convert
+ *
+ * Return: A integer
  */
 int _atoi(char *s)
 {
-	int num;
+	int c = 0;
+	unsigned int ni = 0;
+	int min = 1;
+	int isi = 0;
 
-	if (*s == '-')
+	while (s[c])
 	{
-		/*Negative number*/
-		num = atoi(s + 1);
-		num = -num;
+		if (s[c] == 45)
+		{
+			min *= -1;
+		}
+
+		while (s[c] >= 48 && s[c] <= 57)
+		{
+			isi = 1;
+			ni = (ni * 10) + (s[c] - '0');
+			c++;
+		}
+
+		if (isi == 1)
+		{
+			break;
+		}
+
+		c++;
 	}
-	else if (*s == '+')
-	{
-		/*Positive number*/
-		num = atoi(s + 1);
-	}
-	else if (isdigit(*s))
-	{
-		/*No sign, assume positive*/
-		num = atoi(s);
-	}
-	else
-	{
-		/*Invalid input*/
-		return (0);
-	}
-	return (num);
+
+	ni *= min;
+	return (ni);
 }
