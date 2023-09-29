@@ -13,4 +13,4 @@
 - [0x06](./0x06-pointers_arrays_strings) : Using pointers part II.<br>
 - [0x07](./0x07-pointers_arrays_strings) : Using pointers part III. <br>
 - [0x08](./0x08-recursion) : This is my worst topic💀.Except for finding factorials and fibonacci🤓. <br>
-- [0x09](./0x09-static libraries) : Is just too deep😂tbh. But it brings some sort of independence. <br>
+- [0x09](./0x09-static_libraries) : Is just too deep😂tbh. But it brings some sort of independence. <br>
