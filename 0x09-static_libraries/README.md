@@ -46,6 +46,7 @@ gcc -c divide.c -o lib_divide.o
 gcc -c multiply.c -o lib_multiply.o
 ```
 <br>
+
 3. For this next step we need to create a static library out of ___lib_divide.o___ and __lib_multiply.o__<br>
 ```bash
 ar rcs lib_calc.a lib_divide.o lib_multiply.o
@@ -54,12 +55,14 @@ ar rcs lib_calc.a lib_divide.o lib_multiply.o
 - 'r': Replace or add files to the archive.<br>
 - 'c': Create archive if it doesn't already exist.<br>
 - 's': Tells the ar to generate a symbol table fot he archive. Symbol tables are used for linking object files and resolving symbols at compile time or runtime.<br>
+
 4. We still need our function prototypes in a '.h' macro header file. So this is how our main.h file will look like:<br>
 'main.h'
 ```c
 void _divide(int a, int b);
 void _multiply(int a, int b);
 ```
+
 5. Let's make our program body to find the division and multiplication of two numbers<br>
 'calc.c'
 ```c
@@ -72,19 +75,23 @@ int main(void)
 	return (0);
 }
 ```
+
 6. Now we need to convert our calc.c file into an object file(1's and 0's)<br>
 ```bash
 gcc -c calc.c -o calc.o
 ```
 <br>
+
 7. Run ___ranlib___ function with lib_calc.a to index the library, so it is easy to find functions, variables and alike in them. Some ar functions(whcih look different readily index the library) which depends on the platform.
 ```bash
 ranlib lib_calc.a
 ```
 <br>
+
 8. Lastly let's link our ___calc.o___ with our ___lib_calc.a___<br>
 ```bash
 gcc -o calc calc.o -L. lib-calc.a
 ```
 <br>
+
 And that's how we do it. Easy right?
