@@ -20,9 +20,8 @@
 - The basic tool used to create static libraries is a program called **'ar'** for 'archiver'.<br>
 - Let's start with a sample: We want to create a static library that contains division and multiplication function prototypes;<br>
 1. In our current directory, we will create two files divide.c and multiply.c<br>
-divide.c
----
-```
+'divide.c'
+```c
 #include <stdio.h>
 void _divide(int a, int b)
 {
@@ -30,10 +29,8 @@ void _divide(int a, int b)
 }
 
 ```
----
-multiply.c
----
-```
+'multiply.c'
+```c
 #include <stdio.h>
 void _multiply(int a, int b)
 {
@@ -44,17 +41,13 @@ void _multiply(int a, int b)
 - REMEMBER C-COMPILATION?<br>
 ![Alt text](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DLOWQg8BNQJ4&psig=AOvVaw1kgqbkBD2r1iMcmF76Dkg9&ust=1696067800829000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPDmqojHz4EDFQAAAAAdAAAAABAE)<br>
 2. Now we need to compile our .c files only to the assembling stage (Machine code (.o)). We'll use gcc command (-c): Compile and assemble, but do not link.<br>
-Shell
----
-```
+```shell
 gcc -c divide.c -o lib_divide.o
 gcc -c multiply.c -o lib_multiply.o
 ```
 <br>
 3. For this next step we need to create a static library out of ___lib_divide.o___ and __lib_multiply.o__<br>
-Shell
----
-```
+```shell
 ar rcs lib_calc.a lib_divide.o lib_multiply.o
 ```
 <br>
@@ -62,16 +55,14 @@ ar rcs lib_calc.a lib_divide.o lib_multiply.o
 - 'c': Create archive if it doesn't already exist.<br>
 - 's': Tells the ar to generate a symbol table fot he archive. Symbol tables are used for linking object files and resolving symbols at compile time or runtime.<br>
 4. We still need our function prototypes in a '.h' macro header file. So this is how our main.h file will look like:<br>
-main.h
----
-```
+'main.h'
+```c
 void _divide(int a, int b);
 void _multiply(int a, int b);
 ```
 5. Let's make our program body to find the division and multiplication of two numbers<br>
-calc.c
----
-```
+'calc.c'
+```c
 #include <stdio.h>
 #include "main.h"
 int main(void)
@@ -82,25 +73,18 @@ int main(void)
 }
 ```
 6. Now we need to convert our calc.c file into an object file(1's and 0's)<br>
-Shell
----
-```
+```shell
 gcc -c calc.c -o calc.o
 ```
 <br>
 7. Run ___ranlib___ function with lib_calc.a to index the library, so it is easy to find functions, variables and alike in them. Some ar functions(whcih look different readily index the library) which depends on the platform.
-Shell
----
-```
+```shell
 ranlib lib_calc.a
 ```
 <br>
 8. Lastly let's link our ___calc.o___ with our ___lib_calc.a___<br>
-Shell
----
-```
+```shell
 gcc -o calc calc.o -L. lib-calc.a
 ```
 <br>
 And that's how we do it. Easy right?
-:
