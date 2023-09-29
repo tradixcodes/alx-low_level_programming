@@ -8,7 +8,7 @@
 
 > What are static libraries?<br>
 - These are collections of object files that are linked into the program during the linking phase of compilation, and are not relevant during runtime.<br>
-- Remember we only need executables to run(so the main.o is linked with lib[..].ato get the executable file.<br>
+- Remember we only need executables to run(so the main.o is linked with lib[..].a to get the executable file.<br>
 
 > What are shared libraries?<br>
 - Also called dynamic libraries, are linked into the program in two stages. First is during compile time, the linker verifies that all the functions, variables and alike required by the program, are either linked into the program, or in one of its shared libraries.<br>
