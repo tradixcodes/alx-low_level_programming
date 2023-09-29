@@ -1,4 +1,4 @@
-![img](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tradix.tech%2F&psig=AOvVaw2g_nHcj2l5Fa-QMa4mlQP3&ust=1696065394755000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOi3xY2-z4EDFQAAAAAdAAAAABAE)
+![img](https://bizzy.org/_next/image?url=https%3A%2F%2Fbizzy.ams3.digitaloceanspaces.com%2Fprod%2Fcompanies%2Fbe%2Flogos%2Feb0dfadf-e8cd-427a-9a37-68bed6e72ca6%2F350782512.png&w=128&q=75)
 ## 0x09. C - Static Libraries
 > What are libaries?<br>
 - Libraries are a collection of objects that are made available for use by other programs. They are pre-compiled functions to avoid repetition. They are not executable but used at runtime/ compile time.<br>
@@ -39,7 +39,7 @@ void _multiply(int a, int b)
 ```
 ---
 - REMEMBER C-COMPILATION?<br>
-![img](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DLOWQg8BNQJ4&psig=AOvVaw1kgqbkBD2r1iMcmF76Dkg9&ust=1696067800829000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPDmqojHz4EDFQAAAAAdAAAAABAE)
+![img](https://cdn.nerdyelectronics.com/wp-content/webp-express/webp-images/uploads/2017/07/GCC_CompilationProcess.png.webp)
 2. Now we need to compile our .c files only to the assembling stage (Machine code (.o)). We'll use gcc command (-c): Compile and assemble, but do not link.<br>
 ```bash
 gcc -c divide.c -o lib_divide.o
