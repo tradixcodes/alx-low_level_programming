@@ -82,7 +82,7 @@ gcc -c calc.c -o calc.o
 ```
 <br>
 
-7. Run ___ranlib___ function with lib_calc.a to index the library, so it is easy to find functions, variables and alike in them. Some ar functions(whcih look different readily index the library) which depends on the platform.
+7. Run ___ranlib___ function with lib_calc.a to index the library, so it is easy to find functions, variables and alike in them. Some ar functions(which look different readily index the library) which depends on the platform.
 ```bash
 ranlib lib_calc.a
 ```
