@@ -1,6 +1,6 @@
 # Intro
 
->Welcome to my first c projects.
+Welcome to my first c projects.
 
 ## About
 
