@@ -28,9 +28,11 @@ void _divide(int a, int b)
 {
         printf("Division is : %d\n", a / b);
 }
+
 ```
 ---
 multiply.c
+---
 ```
 #include <stdio.h>
 void _multiply(int a, int b)
@@ -43,13 +45,15 @@ void _multiply(int a, int b)
 ![Alt text](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DLOWQg8BNQJ4&psig=AOvVaw1kgqbkBD2r1iMcmF76Dkg9&ust=1696067800829000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPDmqojHz4EDFQAAAAAdAAAAABAE)<br>
 2. Now we need to compile our .c files only to the assembling stage (Machine code (.o)). We'll use gcc command (-c): Compile and assemble, but do not link.<br>
 Shell
+---
 ```
 gcc -c divide.c -o lib_divide.o
 gcc -c multiply.c -o lib_multiply.o
 ```
 <br>
 3. For this next step we need to create a static library out of ___lib_divide.o___ and __lib_multiply.o__<br>
-Shell 
+Shell
+---
 ```
 ar rcs lib_calc.a lib_divide.o lib_multiply.o
 ```
@@ -79,20 +83,24 @@ int main(void)
 ```
 6. Now we need to convert our calc.c file into an object file(1's and 0's)<br>
 Shell
+---
 ```
 gcc -c calc.c -o calc.o
 ```
 <br>
 7. Run ___ranlib___ function with lib_calc.a to index the library, so it is easy to find functions, variables and alike in them. Some ar functions(whcih look different readily index the library) which depends on the platform.
 Shell
+---
 ```
 ranlib lib_calc.a
 ```
 <br>
 8. Lastly let's link our ___calc.o___ with our ___lib_calc.a___<br>
 Shell
+---
 ```
 gcc -o calc calc.o -L. lib-calc.a
 ```
 <br>
 And that's how we do it. Easy right?
+:
