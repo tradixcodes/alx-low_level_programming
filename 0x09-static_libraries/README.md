@@ -38,7 +38,7 @@ void _multiply(int a, int b)
 }
 ```
 ---
-- REMEMBER C-COMPILATION?<br>
+> REMEMBER C-COMPILATION?<br>
 ![img](https://cdn.nerdyelectronics.com/wp-content/webp-express/webp-images/uploads/2017/07/GCC_CompilationProcess.png.webp)
 2. Now we need to compile our .c files only to the assembling stage (Machine code (.o)). We'll use gcc command (-c): Compile and assemble, but do not link.<br>
 ```bash
