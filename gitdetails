@@ -1,0 +1,4 @@
+#!/bin/bash
+git pull https://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@github.com/tradixcodes/alx-low_level_programming.git
+git config --global user.email "tradix2021@gmail.com"
+git config --global user.name "Tradix"
